@@ -1,0 +1,19 @@
+{
+    "name": "administrador/library-jr",
+    "description": "Desenvolvido como projeto final em paralelo com o desenvolvimento da turma de Dev do SESI CE380",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Administrador\\LibraryJr\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "desenvolvimento-sesi",
+            "email": "desenvsesisenai@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    }
+}
