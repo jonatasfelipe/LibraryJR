@@ -3,7 +3,7 @@
 namespace src\models;
 use PDO;
 
-class TreinadorModel
+class EmprestimoModel
 {
     private $pdo;
 
@@ -12,7 +12,7 @@ class TreinadorModel
         $this->pdo = $pdo;
     }
 
-    public function criarEsporte($nome, $modalidade, $ano_olimpiada)
+    public function criarEmprestimo($nome, $modalidade, $ano_olimpiada)
     {
         $sql = "INSERT INTO esporte (nome, modalidade, ano_olimpiada) VALUES (?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);

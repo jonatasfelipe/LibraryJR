@@ -10,14 +10,21 @@ body {
     flex-wrap: wrap;
 }
 
+th, td {
+    padding: 1em;
+}
+
 .container {
     width: 100vw;
 }
 
-div#cabecalho,  div#conteudo{
-    display: flex;
+tr#cabecalho{
+    background-color: aqua;
 }
 
+tr#conteudo {
+    text-align: center;        
+}
 
 @media (max-width:320px){
 

@@ -27,7 +27,7 @@ class LivroController
     {
         $livros = $this->livroModel->listarLivros();
         if ($livros != null) {
-            include_once 'src/views/livros/lista.php';
+            include_once 'C:/xampp/htdocs/LibraryJR/src/views/livros/exibirListaLivros.php';
         } else {
             echo "Não existem livros cadastrados!";
         }
