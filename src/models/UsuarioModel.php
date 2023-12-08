@@ -12,11 +12,11 @@ class UsuarioModel
         $this->pdo = $pdo;
     }
 
-    public function criarUsuario($nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha)
+    public function criarUsuario($nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha, $nivel_permissao)
     {
-        $sql = "INSERT INTO usuarios (nome_completo, data_nascimento, email, telefone, cpf, usuario, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO usuarios (nome_completo, data_nascimento, email, telefone, cpf, usuario, senha, nivel_permissao) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha]);
+        $stmt->execute([$nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha, $nivel_permissao]);
     }
 
     public function listarUsuarios()

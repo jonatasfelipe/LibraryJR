@@ -13,9 +13,9 @@ class UsuarioController
         $this->usuarioModel = new UsuarioModel($pdo);
     }
 
-    public function criarUsuario($nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha)
+    public function criarUsuario($nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha, $nivel_permissao)
     {
-        $this->usuarioModel->criarUsuario($nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha);
+        $this->usuarioModel->criarUsuario($nome_completo, $data_nascimento, $email, $telefone, $cpf, $usuario, $senha, $nivel_permissao);
     }
 
     public function listarUsuarios()

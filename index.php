@@ -61,14 +61,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a href="#">Autores</a>
 
                         <a href="#">Contato</a>
-                        <a href="#">Sobre Nós</a></div>
-                        <div>
-                            <form id="formLogout" method="POST">
-                                <input type="hidden" name="formulario_enviado" value="logout">
-                                <input type="hidden" name="id_usuario" value=' . $_SESSION['USUARIO'][0]['id_usuario'] . '">
-                                <button id="buttonLogout" type="submit">Sair</button>
-                            </form>
-                        </div>';
+                        <a href="#">Sobre Nós</a></div>';
+                    echo '</div><div>
+                    <form id="formLogout" method="POST">
+                        <input type="hidden" name="formulario_enviado" value="logout">
+                        <input type="hidden" name="id_usuario" value=' . $_SESSION['USUARIO'][0]['id_usuario'] . '">
+                        <button id="buttonLogout" type="submit">Sair</button>
+                    </form>
+                </div>';
                 }
             }
             ?>
@@ -88,6 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" id="senha" name="senha" required>
 
                     <button type="submit" id="buttonLogin">Entrar</button>
+                    <button type="button" id="buttonCadastrar"><a href="src/views/usuarios/cadastroUsuario.php">Registrar</a></button>
                 </form>
             </div>
         <?php } ?>
